@@ -4,6 +4,89 @@ body {
   font-family: sans-serif;
 }
 
+#header {
+  display: flex;
+  justify-content: space-between;
+  background-color: royalblue;
+}
+
+#brand {
+  margin-left: 10px;
+  align-self: center;
+}
+
+.mainNav {
+  display: flex;
+  align-items: center;
+}
+
 .navBar {
   list-style: none;
+  display: none;
+}
+
+.navButton {
+  border: none;
+  background-color: royalblue;
+  position: absolute;
+  top: 1.5%;
+  right: 0;
+  margin-right: 10px;
+  height: 2rem;
+  width: 3rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navBurger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  background-color: grey;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+
+.navBurger:before,
+.navBurger:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+  right: 1%;
+  transition: 0.5s;
+}
+
+.navBurger:before {
+  transform: translateY(-10px);
+}
+
+.navBurger:after {
+  transform: translateY(10px);
+}
+
+.navButton:hover .navBurger:before,
+.navButton:hover .navBurger:after,
+.navButton:hover .navBurger {
+  background-color: #ccc;
+}
+
+.navButton:hover .navBurger:before,
+.navButton:hover .navBurger:after {
+  transform: translateY(0);
+}
+
+.navButton:hover .navBurger {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navButton:hover .navBurger:before {
+  transform: rotate(-45deg);
+}
+
+.navButton:hover .navBurger:after {
+  transform: rotate(45deg);
 }
